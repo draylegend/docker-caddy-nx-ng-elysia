@@ -1,0 +1,14 @@
+{
+  "name": "@docker-caddy-nx-ng-elysia/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "20.3.1",
+    "@nx/workspace": "20.3.1",
+    "nx": "20.3.1",
+    "prettier": "3.4.2"
+  }
+}
