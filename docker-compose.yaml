@@ -1,0 +1,14 @@
+services:
+  static-website:
+    build:
+      context: .
+      dockerfile: apps/app/Dockerfile
+    volumes:
+      - ./dist/apps/app/browser:/app
+    networks:
+      - coolify
+    restart: unless-stopped
+
+networks:
+  coolify:
+    external: true
