@@ -1,3 +1,3 @@
-FROM alpine
+FROM lucaslorentz/caddy-docker-proxy:alpine AS release
 WORKDIR /app
-CMD ["tail", "-f", "/dev/null"]
+COPY dist/apps/app/browser/index.html .
