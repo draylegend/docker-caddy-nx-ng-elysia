@@ -1,5 +1,5 @@
 app.finflow.io {
-    reverse_proxy /api/* api:4000
+    reverse_proxy /api/* api:3000
     root * /app
     file_server
 }
