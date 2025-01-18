@@ -1,5 +1,5 @@
 FROM lucaslorentz/caddy-docker-proxy:alpine AS release
 WORKDIR /app
-COPY apps/app/Caddyfile /data/caddy/proxy/caddy/Caddyfile
+COPY apps/app/Caddyfile /data/caddy/proxy/caddy/dynamic/Caddyfile
 RUN echo "<h1>welcome to finflow!!!</h1>" > index.html
 #COPY dist/apps/app/browser/index.html .
