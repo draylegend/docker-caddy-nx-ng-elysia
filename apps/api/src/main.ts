@@ -3,5 +3,5 @@ import cors from '@elysiajs/cors';
 
 new Elysia({ prefix: '/api' })
   .use(cors())
-  .get('/elysia-version', () => ({ version: '1.2.10' }))
+  .get('/', () => ({ msg: 'Hello from backend!' }))
   .listen(process.env['PORT'], ({ url }) => console.log(`🦊 ${url.href}`));
