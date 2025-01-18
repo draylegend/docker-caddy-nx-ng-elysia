@@ -9,6 +9,8 @@ services:
       dockerfile: apps/app/Dockerfile
       target: release
     restart: unless-stopped
+    networks:
+      - coolify
 
   app:
     depends_on:
