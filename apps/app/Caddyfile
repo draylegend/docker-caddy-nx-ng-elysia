@@ -2,5 +2,8 @@ app.finflow.io {
   root * /app  # Serve static files from the /app directory
   try_files {path} /index.html  # Angular routing fallback
   file_server
-  reverse_proxy /api/* api:3000
+
+  handle /api/* {
+    reverse_proxy api:3000  # Proxy API requests to the backend
+  }
 }
