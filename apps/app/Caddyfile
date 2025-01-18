@@ -1,4 +1,4 @@
 app.finflow.io {
-    root * /srv
+    root * /app
     file_server
 }
