@@ -1,0 +1,17 @@
+app.finflow.io {
+  # Serve the frontend static files
+  root * /app  # Adjust this to the frontend build path
+  file_server
+
+  # Proxy API requests to the API service
+  handle /api/* {
+    #uri strip_prefix /api  # Remove the "/api" prefix
+    reverse_proxy api:3000
+  }
+
+  # Rewrite requests for Angular routing
+  handle {
+    try_files {path} /index.html
+    file_server
+  }
+}
