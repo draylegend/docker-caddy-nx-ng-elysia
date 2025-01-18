@@ -8,6 +8,7 @@ services:
       context: .
       dockerfile: apps/app/Dockerfile
       target: release
+    restart: unless-stopped
 
   app:
     depends_on:
