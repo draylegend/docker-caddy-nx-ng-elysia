@@ -1,4 +1,4 @@
-FROM lucaslorentz/caddy-docker-proxy:alpine AS release
+FROM caddy:2-alpine AS release
 COPY ./caddy/Caddyfile /dynamic/Caddyfile
 COPY ./apps/app/app.caddy /dynamic/app.caddy
 WORKDIR /app
