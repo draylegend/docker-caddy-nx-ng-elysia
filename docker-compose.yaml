@@ -3,7 +3,13 @@ networks:
     external: true
 
 services:
-  caddy:
+  api:
+    build:
+      context: .
+      dockerfile: apps/app/Dockerfile
+      target: release
+
+  app:
     build:
       context: .
       dockerfile: apps/app/Dockerfile
