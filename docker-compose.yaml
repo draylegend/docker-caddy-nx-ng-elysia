@@ -10,6 +10,8 @@ services:
       target: release
 
   app:
+    depends_on:
+      - api
     build:
       context: .
       dockerfile: apps/app/Dockerfile
