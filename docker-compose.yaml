@@ -29,4 +29,4 @@ services:
       - '/data/coolify/proxy/caddy/dynamic:/dynamic'
       - '/data/coolify/proxy/caddy/config:/config'
       - '/data/coolify/proxy/caddy/data:/data'
-      - './apps/app/Caddyfile:/dynamic/app.caddy'
+      - "./apps/app/Caddyfile:/dynamic/app.caddy:ro"
